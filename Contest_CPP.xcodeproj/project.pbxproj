@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC3F35321ACD357B00ECB356 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F35311ACD357B00ECB356 /* main.cpp */; };
+		FC3F35391ACD35AB00ECB356 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FC3F35381ACD35AB00ECB356 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		FC3F352E1ACD357B00ECB356 /* Contest_CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Contest_CPP; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3F35311ACD357B00ECB356 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FC3F35381ACD35AB00ECB356 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 		FC3F35251ACD357A00ECB356 = {
 			isa = PBXGroup;
 			children = (
+				FC3F35381ACD35AB00ECB356 /* README.md */,
 				FC3F35301ACD357B00ECB356 /* Contest_CPP */,
 				FC3F352F1ACD357B00ECB356 /* Products */,
 			);
@@ -118,6 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC3F35391ACD35AB00ECB356 /* README.md in Sources */,
 				FC3F35321ACD357B00ECB356 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
