@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		FC3F35321ACD357B00ECB356 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F35311ACD357B00ECB356 /* main.cpp */; };
 		FC3F35391ACD35AB00ECB356 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FC3F35381ACD35AB00ECB356 /* README.md */; };
+		FC3F353C1ACD457C00ECB356 /* Participant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F353A1ACD457C00ECB356 /* Participant.cpp */; };
+		FC3F35411ACD4A9E00ECB356 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F353F1ACD4A9E00ECB356 /* Console.cpp */; };
+		FC3F35441ACD4AD800ECB356 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F35421ACD4AD800ECB356 /* Controller.cpp */; };
+		FC3F35491ACD4B0700ECB356 /* Repository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F35471ACD4B0700ECB356 /* Repository.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +31,14 @@
 		FC3F352E1ACD357B00ECB356 /* Contest_CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Contest_CPP; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3F35311ACD357B00ECB356 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FC3F35381ACD35AB00ECB356 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FC3F353A1ACD457C00ECB356 /* Participant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Participant.cpp; sourceTree = "<group>"; };
+		FC3F353B1ACD457C00ECB356 /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
+		FC3F353F1ACD4A9E00ECB356 /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Console.cpp; sourceTree = "<group>"; };
+		FC3F35401ACD4A9E00ECB356 /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
+		FC3F35421ACD4AD800ECB356 /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		FC3F35431ACD4AD800ECB356 /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		FC3F35471ACD4B0700ECB356 /* Repository.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Repository.cpp; sourceTree = "<group>"; };
+		FC3F35481ACD4B0700ECB356 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +72,49 @@
 		FC3F35301ACD357B00ECB356 /* Contest_CPP */ = {
 			isa = PBXGroup;
 			children = (
+				FC3F35461ACD4AE900ECB356 /* Repository */,
+				FC3F35451ACD4ADF00ECB356 /* Controller */,
+				FC3F353D1ACD458B00ECB356 /* Domain */,
+				FC3F353E1ACD463700ECB356 /* UI */,
 				FC3F35311ACD357B00ECB356 /* main.cpp */,
 			);
 			path = Contest_CPP;
+			sourceTree = "<group>";
+		};
+		FC3F353D1ACD458B00ECB356 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FC3F353A1ACD457C00ECB356 /* Participant.cpp */,
+				FC3F353B1ACD457C00ECB356 /* Participant.h */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		FC3F353E1ACD463700ECB356 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FC3F353F1ACD4A9E00ECB356 /* Console.cpp */,
+				FC3F35401ACD4A9E00ECB356 /* Console.h */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		FC3F35451ACD4ADF00ECB356 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC3F35421ACD4AD800ECB356 /* Controller.cpp */,
+				FC3F35431ACD4AD800ECB356 /* Controller.h */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		FC3F35461ACD4AE900ECB356 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FC3F35471ACD4B0700ECB356 /* Repository.cpp */,
+				FC3F35481ACD4B0700ECB356 /* Repository.h */,
+			);
+			name = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +175,10 @@
 			files = (
 				FC3F35391ACD35AB00ECB356 /* README.md in Sources */,
 				FC3F35321ACD357B00ECB356 /* main.cpp in Sources */,
+				FC3F35441ACD4AD800ECB356 /* Controller.cpp in Sources */,
+				FC3F353C1ACD457C00ECB356 /* Participant.cpp in Sources */,
+				FC3F35411ACD4A9E00ECB356 /* Console.cpp in Sources */,
+				FC3F35491ACD4B0700ECB356 /* Repository.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E5E69428-1F22-4E6A-A6D2-F9FAF297DFC4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Contest_CPP</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D1B7C4D2FA9EA119DCA2E8B493FFA7551922AABD</key>
+		<string>github.com:victorursan/Contest_CPP.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Contest_CPP.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D1B7C4D2FA9EA119DCA2E8B493FFA7551922AABD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:victorursan/Contest_CPP.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D1B7C4D2FA9EA119DCA2E8B493FFA7551922AABD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D1B7C4D2FA9EA119DCA2E8B493FFA7551922AABD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Contest_CPP</string>
+		</dict>
+	</array>
+</dict>
+</plist>
