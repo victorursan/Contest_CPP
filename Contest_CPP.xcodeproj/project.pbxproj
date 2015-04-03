@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FC3F35321ACD357B00ECB356 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F35311ACD357B00ECB356 /* main.cpp */; };
-		FC3F35391ACD35AB00ECB356 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FC3F35381ACD35AB00ECB356 /* README.md */; };
 		FC3F353C1ACD457C00ECB356 /* Participant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F353A1ACD457C00ECB356 /* Participant.cpp */; };
 		FC3F35411ACD4A9E00ECB356 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F353F1ACD4A9E00ECB356 /* Console.cpp */; };
 		FC3F35441ACD4AD800ECB356 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F35421ACD4AD800ECB356 /* Controller.cpp */; };
@@ -173,7 +172,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3F35391ACD35AB00ECB356 /* README.md in Sources */,
 				FC3F35321ACD357B00ECB356 /* main.cpp in Sources */,
 				FC3F35441ACD4AD800ECB356 /* Controller.cpp in Sources */,
 				FC3F353C1ACD457C00ECB356 /* Participant.cpp in Sources */,
@@ -292,6 +290,7 @@
 				FC3F35371ACD357B00ECB356 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

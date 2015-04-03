@@ -7,9 +7,13 @@
 //
 
 #include <iostream>
+#include "Participant.h"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+  // insert code here...
+  std::cout << "Hello, World!\n";
+  Participant *p = new Participant;
+  cin >> *p;
+  cout << *p;
+  return 0;
 }
