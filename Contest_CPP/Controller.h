@@ -29,9 +29,7 @@ public:
   void addParticipant(string givenName, string familyName, float score);
   void updateParticipant(int id, string givenName, string familyName, float score);
   void removeParticipant(int id);
-  //  Participant findParticipantWithId(int id);
-  //  Participant findParticipantWithGivenName(string givenName);
-  //  Participant findParticipantWithFamilyName(string familyName);
+//  Participant findParticipantWithId(int id);
   vector<Participant> filterByGivenName(string givenName);
   vector<Participant> filterByFamilyName(string familyName);
   vector<Participant> filterByScore(float score);

@@ -35,10 +35,6 @@ void Controller::removeParticipant(int id) {
   repository.remove(id);
 }
 
-//  Participant findParticipantWithId(int id);
-//  Participant findParticipantWithGivenName(string givenName);
-//  Participant findParticipantWithFamilyName(string familyName);
-
 vector<Participant> Controller::filterByGivenName(string givenName) {
   vector<Participant> toFilter = repository.getAll();
   vector<Participant> filtered;
