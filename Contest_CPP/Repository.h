@@ -9,42 +9,26 @@
 #ifndef __Contest_CPP__Repository__
 #define __Contest_CPP__Repository__
 
-
 #include <stdio.h>
 #include <sstream>
 #include <string>
+#include <vector>
+#include "Participant.h"
 
 using namespace std;
 
 class Repository {
+  vector<Participant> store;
 
-//  string givenName;
-//  string familyName;
-//  float score;
-//
-//public:
-//
-//  Participant(const string &givenName = "", const string &familyName = "",const float& score = 0) {
-//    this->givenName = givenName;
-//    this->familyName = familyName;
-//    this->score = score;
-//  }
-//
-//  string getGivenName() const;
-//  void setGivenName(string &givenName);
-//
-//  string getFamilyName() const;
-//  void setFamilyName(string &familyName);
-//
-//  float getScore() const;
-//  void setScore(float score);
-//
-//  bool operator ==(const Participant& p2) const;
-//  bool operator !=(const Participant& p3) const;
-//
-//  friend std::ostream& operator <<(std::ostream&, const Participant&);
-//  friend std::istream& operator >>(std::istream&, Participant&);
-//  
+public:
+  Repository();
+  ~Repository();
+
+  vector<Participant> getAll();
+  void save(Participant p);
+  void update(int id, Participant p);
+  void remove(int id);
+  const Participant* findById(int id);
 };
 
 #endif /* defined(__Contest_CPP__Repository__) */

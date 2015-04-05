@@ -15,7 +15,7 @@ Participant::Participant(const string &givenName, const string &familyName, cons
 }
 
 Participant::~Participant() {
-  //destroy shit up
+  delete this;
 }
 
 string Participant::getGivenName() const {

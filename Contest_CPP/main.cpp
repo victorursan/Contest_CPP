@@ -7,13 +7,12 @@
 //
 
 #include <iostream>
-#include "Participant.h"
+#include "Console.h"
+#include <vector>
 
 int main(int argc, const char * argv[]) {
-  // insert code here...
-  std::cout << "Hello, World!\n";
-  Participant *p = new Participant;
-  cin >> *p;
-  cout << *p;
-  return 0;
+  Repository *repo = new Repository();
+  Controller *ctrl = new Controller(*repo);
+  Console *console = new Console(ctrl);
+  console->run();
 }

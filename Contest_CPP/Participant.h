@@ -12,7 +12,6 @@
 #include <stdio.h>
 #include <sstream>
 #include <string>
-#include <vector>
 
 using namespace std;
 
@@ -35,8 +34,8 @@ public:
   float getScore() const;
   void setScore(float score);
 
-  bool operator ==(const Participant& p2) const;
-  bool operator !=(const Participant& p3) const;
+  bool operator ==(const Participant& other) const;
+  bool operator !=(const Participant& other) const;
 
   friend std::ostream& operator <<(std::ostream&, const Participant&);
   friend std::istream& operator >>(std::istream&, Participant&);
