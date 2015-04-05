@@ -15,4 +15,5 @@ int main(int argc, const char * argv[]) {
   Controller *ctrl = new Controller(*repo);
   Console *console = new Console(ctrl);
   console->run();
+  return 0;
 }

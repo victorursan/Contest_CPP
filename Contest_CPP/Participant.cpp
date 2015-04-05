@@ -7,6 +7,10 @@
 //
 
 #include "Participant.h"
+#include <iostream>
+#include <stdio.h>
+#include <sstream>
+#include <string>
 
 Participant::Participant(const string &givenName, const string &familyName, const float& score) {
   this->givenName = givenName;
@@ -15,7 +19,7 @@ Participant::Participant(const string &givenName, const string &familyName, cons
 }
 
 Participant::~Participant() {
-  delete this;
+//  delete this;
 }
 
 string Participant::getGivenName() const {

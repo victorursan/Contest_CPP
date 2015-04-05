@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		574E93BC1AD16BDB00BDEE64 /* TestParticipant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574E93BA1AD16BDB00BDEE64 /* TestParticipant.cpp */; };
+		574E93BF1AD16CE100BDEE64 /* TestController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574E93BD1AD16CE100BDEE64 /* TestController.cpp */; };
+		574E93C21AD16CF700BDEE64 /* TestRepository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574E93C01AD16CF700BDEE64 /* TestRepository.cpp */; };
+		574E93C51AD16F2F00BDEE64 /* test_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574E93C31AD16F2F00BDEE64 /* test_main.cpp */; };
 		FC3F35321ACD357B00ECB356 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F35311ACD357B00ECB356 /* main.cpp */; };
 		FC3F353C1ACD457C00ECB356 /* Participant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F353A1ACD457C00ECB356 /* Participant.cpp */; };
 		FC3F35411ACD4A9E00ECB356 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC3F353F1ACD4A9E00ECB356 /* Console.cpp */; };
@@ -27,6 +31,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		574E93BA1AD16BDB00BDEE64 /* TestParticipant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestParticipant.cpp; sourceTree = "<group>"; };
+		574E93BB1AD16BDB00BDEE64 /* TestParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestParticipant.h; sourceTree = "<group>"; };
+		574E93BD1AD16CE100BDEE64 /* TestController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestController.cpp; path = Contest_CPP/TestController.cpp; sourceTree = "<group>"; };
+		574E93BE1AD16CE100BDEE64 /* TestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TestController.h; path = Contest_CPP/TestController.h; sourceTree = "<group>"; };
+		574E93C01AD16CF700BDEE64 /* TestRepository.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestRepository.cpp; sourceTree = "<group>"; };
+		574E93C11AD16CF700BDEE64 /* TestRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRepository.h; sourceTree = "<group>"; };
+		574E93C31AD16F2F00BDEE64 /* test_main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_main.cpp; sourceTree = "<group>"; };
+		574E93C41AD16F2F00BDEE64 /* test_main.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_main.h; sourceTree = "<group>"; };
 		FC3F352E1ACD357B00ECB356 /* Contest_CPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Contest_CPP; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3F35311ACD357B00ECB356 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FC3F35381ACD35AB00ECB356 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -51,11 +63,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		574E93AB1AD1648200BDEE64 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				574E93B71AD16B8C00BDEE64 /* Test_Contest */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		574E93B61AD16B7C00BDEE64 /* Test_Repository */ = {
+			isa = PBXGroup;
+			children = (
+				574E93C01AD16CF700BDEE64 /* TestRepository.cpp */,
+				574E93C11AD16CF700BDEE64 /* TestRepository.h */,
+			);
+			name = Test_Repository;
+			sourceTree = "<group>";
+		};
+		574E93B71AD16B8C00BDEE64 /* Test_Contest */ = {
+			isa = PBXGroup;
+			children = (
+				574E93B91AD16BA400BDEE64 /* Test_Domain */,
+				574E93B81AD16B9D00BDEE64 /* Test_Controller */,
+				574E93B61AD16B7C00BDEE64 /* Test_Repository */,
+				574E93C31AD16F2F00BDEE64 /* test_main.cpp */,
+				574E93C41AD16F2F00BDEE64 /* test_main.h */,
+			);
+			name = Test_Contest;
+			sourceTree = "<group>";
+		};
+		574E93B81AD16B9D00BDEE64 /* Test_Controller */ = {
+			isa = PBXGroup;
+			children = (
+				574E93BD1AD16CE100BDEE64 /* TestController.cpp */,
+				574E93BE1AD16CE100BDEE64 /* TestController.h */,
+			);
+			name = Test_Controller;
+			sourceTree = "<group>";
+		};
+		574E93B91AD16BA400BDEE64 /* Test_Domain */ = {
+			isa = PBXGroup;
+			children = (
+				574E93BA1AD16BDB00BDEE64 /* TestParticipant.cpp */,
+				574E93BB1AD16BDB00BDEE64 /* TestParticipant.h */,
+			);
+			name = Test_Domain;
+			sourceTree = "<group>";
+		};
 		FC3F35251ACD357A00ECB356 = {
 			isa = PBXGroup;
 			children = (
 				FC3F35381ACD35AB00ECB356 /* README.md */,
 				FC3F35301ACD357B00ECB356 /* Contest_CPP */,
+				574E93AB1AD1648200BDEE64 /* Tests */,
 				FC3F352F1ACD357B00ECB356 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -173,10 +233,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3F35321ACD357B00ECB356 /* main.cpp in Sources */,
+				574E93BF1AD16CE100BDEE64 /* TestController.cpp in Sources */,
+				574E93BC1AD16BDB00BDEE64 /* TestParticipant.cpp in Sources */,
+				574E93C21AD16CF700BDEE64 /* TestRepository.cpp in Sources */,
 				FC3F35441ACD4AD800ECB356 /* Controller.cpp in Sources */,
 				FC3F353C1ACD457C00ECB356 /* Participant.cpp in Sources */,
 				FC3F35411ACD4A9E00ECB356 /* Console.cpp in Sources */,
 				FC3F35491ACD4B0700ECB356 /* Repository.cpp in Sources */,
+				574E93C51AD16F2F00BDEE64 /* test_main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

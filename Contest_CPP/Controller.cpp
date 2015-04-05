@@ -40,31 +40,34 @@ void Controller::removeParticipant(int id) {
 //  Participant findParticipantWithFamilyName(string familyName);
 
 vector<Participant> Controller::filterByGivenName(string givenName) {
-  vector<Participant> toFilter;
-  for (vector<Participant>::iterator p = repository.getAll().begin(); p != repository.getAll().end(); ++p) {
+  vector<Participant> toFilter = repository.getAll();
+  vector<Participant> filtered;
+  for (vector<Participant>::iterator p = toFilter.begin(); p != toFilter.end(); ++p) {
     if (p->getGivenName() == givenName) {
-      toFilter.push_back(*p);
+      filtered.push_back(*p);
     }
   }
-  return toFilter;
+  return filtered;
 }
 
 vector<Participant> Controller::filterByFamilyName(string familyName) {
-  vector<Participant> toFilter;
-  for (vector<Participant>::iterator p = repository.getAll().begin(); p != repository.getAll().end(); ++p) {
+  vector<Participant> toFilter = repository.getAll();
+  vector<Participant> filtered;
+  for (vector<Participant>::iterator p = toFilter.begin(); p != toFilter.end(); ++p) {
     if (p->getFamilyName() == familyName) {
-      toFilter.push_back(*p);
+      filtered.push_back(*p);
     }
   }
-  return toFilter;
+  return filtered;
 }
 
 vector<Participant> Controller::filterByScore(float score) {
-  vector<Participant> toFilter;
-  for (vector<Participant>::iterator p = repository.getAll().begin(); p != repository.getAll().end(); ++p) {
+  vector<Participant> toFilter = repository.getAll();
+  vector<Participant> filtered;
+  for (vector<Participant>::iterator p = toFilter.begin(); p != toFilter.end(); ++p) {
     if (p->getScore() == score) {
-      toFilter.push_back(*p);
+      filtered.push_back(*p);
     }
   }
-  return toFilter;
+  return filtered;
 }
