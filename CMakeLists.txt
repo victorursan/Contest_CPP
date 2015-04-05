@@ -12,8 +12,6 @@ set(SOURCE_FILES
     Contest_CPP/Participant.cpp
     Contest_CPP/Participant.h
     Contest_CPP/Repository.cpp
-    Contest_CPP/Repository.h
-    TestParticipant.cpp
-    TestParticipant.h)
+    Contest_CPP/Repository.h)
 
 add_executable(lab_hw_6_7_Contest ${SOURCE_FILES})

@@ -8,7 +8,7 @@
 
 #include "Controller.h"
 
-Controller::Controller(Repository repo) {
+Controller::Controller(Repository<Participant> repo) {
   this->repository = repo;
 }
 
@@ -25,8 +25,8 @@ void Controller::addParticipant(string givenName, string familyName, float score
   Participant p(givenName, familyName, score);
   UndoParticipant undo = UndoParticipant(repository.size(), 1, p);
   undo_participants.push_back(undo);
-  cout<<"hello"<<endl;
-  cout<<p;
+  cout<<"Added participant: \n";
+  cout<<p<<endl;
   repository.save(p);
 }
 

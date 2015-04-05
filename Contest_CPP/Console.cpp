@@ -8,7 +8,6 @@
 
 #include "Console.h"
 
-
 Console::Console(Controller* ctrl) {
   this->ctrl = ctrl;
 }

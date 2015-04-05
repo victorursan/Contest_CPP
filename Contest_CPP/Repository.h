@@ -17,19 +17,20 @@
 
 using namespace std;
 
+template <typename T>
 class Repository {
-  vector<Participant> store;
+  vector<T> store;
 
 public:
   Repository();
   ~Repository();
 
-  vector<Participant> getAll();
-  void save(Participant p);
-  void insertAtPosition(int id, Participant p);
-  void update(int id, Participant p);
+  vector<T> getAll();
+  void save(T p);
+  void insertAtPosition(int id, T p);
+  void update(int id, T p);
   void remove(int id);
-  const Participant findById(int id);
+  const T findById(int id);
   int size();
 };
 

@@ -11,7 +11,7 @@
 #include <vector>
 
 int main(int argc, const char * argv[]) {
-  Repository *repo = new Repository();
+  Repository<Participant> *repo = new Repository<Participant>();
   Controller *ctrl = new Controller(*repo);
   Console *console = new Console(ctrl);
   console->run();

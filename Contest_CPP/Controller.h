@@ -15,15 +15,16 @@
 #include <vector>
 #include "Participant.h"
 #include "Repository.h"
+#include "Repository.cpp"
 #include "UndoParticipant.h"
 
 using namespace std;
 
 class Controller {
-  Repository repository;
+  Repository<Participant> repository;
   vector<UndoParticipant> undo_participants;
 public:
-  Controller(Repository repo);
+  Controller(Repository<Participant> repo);
   ~Controller();
 
   vector<Participant> getParticipants();

@@ -8,38 +8,47 @@
 
 #include "Repository.h"
 
-Repository::Repository() {
+template <typename T>
+Repository<T>::Repository() {
   store.resize(0);
 }
 
-Repository::~Repository() {
+template <typename T>
+Repository<T>::~Repository() {
 //  delete this;
 }
 
-vector<Participant> Repository::getAll() {
+template <typename T>
+vector<T> Repository<T>::getAll() {
   return this->store;
 }
 
-void Repository::save(Participant p) {
+template <typename T>
+void Repository<T>::save(T p) {
   store.push_back(p);
 }
 
-void Repository::insertAtPosition(int id, Participant p) {
+template <typename T>
+void Repository<T>::insertAtPosition(int id, T p) {
   store.insert(store.begin() + id, p);
 }
 
-void Repository::update(int id, Participant p) {
+template <typename T>
+void Repository<T>::update(int id, T p) {
   store[id] = p;
 }
 
-void Repository::remove(int id) {
+template <typename T>
+void Repository<T>::remove(int id) {
   store.erase(store.begin() + id);
 }
 
-const Participant Repository::findById(int id) {
+template <typename T>
+const T Repository<T>::findById(int id) {
   return store[id];
 }
 
-int Repository::size() {
+template <class T>
+int Repository<T>::size() {
   return (int)store.size();
 }
