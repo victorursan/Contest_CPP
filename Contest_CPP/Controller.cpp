@@ -13,8 +13,8 @@ Controller::Controller(Repository repo) {
 }
 
 Controller::~Controller() {
-  delete &repository;
-  delete this;
+//  delete &repository;
+//  delete this;
 }
 
 vector<Participant> Controller::getParticipants(){
@@ -23,15 +23,24 @@ vector<Participant> Controller::getParticipants(){
 
 void Controller::addParticipant(string givenName, string familyName, float score) {
   Participant p(givenName, familyName, score);
+  UndoParticipant undo = UndoParticipant(repository.size(), 1, p);
+  undo_participants.push_back(undo);
+  cout<<"hello"<<endl;
+  cout<<p;
   repository.save(p);
 }
 
 void Controller::updateParticipant(int id, string givenName, string familyName, float score) {
   Participant p(givenName, familyName, score);
+  UndoParticipant undo = UndoParticipant(id, 3, p);
+  undo_participants.push_back(undo);
   repository.update(id, p);
 }
 
 void Controller::removeParticipant(int id) {
+  Participant p = repository.findById(id);
+  UndoParticipant undo = UndoParticipant(id, 2, p);
+  undo_participants.push_back(undo);
   repository.remove(id);
 }
 
@@ -66,4 +75,23 @@ vector<Participant> Controller::filterByScore(float score) {
     }
   }
   return filtered;
+}
+
+void Controller::undoLastOperation() {
+  UndoParticipant undo = undo_participants.back();
+  int op = undo.getOperation();
+  switch (op) {
+    case 1:
+      repository.remove(undo.getPosition());
+      break;
+    case 2:
+      repository.insertAtPosition(undo.getPosition(), undo.getParticipant());
+      break;
+    case 3:
+      repository.update(undo.getPosition(), undo.getParticipant());
+      break;
+    default:
+      break;
+  }
+  undo_participants.pop_back();
 }

@@ -26,9 +26,11 @@ public:
 
   vector<Participant> getAll();
   void save(Participant p);
+  void insertAtPosition(int id, Participant p);
   void update(int id, Participant p);
   void remove(int id);
-  const Participant* findById(int id);
+  const Participant findById(int id);
+  int size();
 };
 
 #endif /* defined(__Contest_CPP__Repository__) */

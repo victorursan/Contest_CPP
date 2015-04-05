@@ -9,7 +9,7 @@
 #ifndef __Contest_CPP__Participant__
 #define __Contest_CPP__Participant__
 
-//#include <iostream>
+#include <iostream>
 #include <stdio.h>
 #include <sstream>
 #include <string>

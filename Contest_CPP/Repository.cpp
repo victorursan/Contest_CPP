@@ -24,6 +24,10 @@ void Repository::save(Participant p) {
   store.push_back(p);
 }
 
+void Repository::insertAtPosition(int id, Participant p) {
+  store.insert(store.begin() + id, p);
+}
+
 void Repository::update(int id, Participant p) {
   store[id] = p;
 }
@@ -32,6 +36,10 @@ void Repository::remove(int id) {
   store.erase(store.begin() + id);
 }
 
-const Participant* Repository::findById(int id) {
-  return &store[id];
+const Participant Repository::findById(int id) {
+  return store[id];
+}
+
+int Repository::size() {
+  return (int)store.size();
 }

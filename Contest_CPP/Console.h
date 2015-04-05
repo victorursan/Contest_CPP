@@ -29,7 +29,8 @@ class Console {
   void filter_participants_by_given_name();
   void filter_participants_by_family_name();
   void filter_participants_by_score();
-
+  void undo_last_operation();
+  
 public:
   Console(Controller* ctrl);
   ~Console();

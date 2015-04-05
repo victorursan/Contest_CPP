@@ -15,12 +15,13 @@
 #include <vector>
 #include "Participant.h"
 #include "Repository.h"
+#include "UndoParticipant.h"
 
 using namespace std;
 
 class Controller {
   Repository repository;
-
+  vector<UndoParticipant> undo_participants;
 public:
   Controller(Repository repo);
   ~Controller();
@@ -33,7 +34,7 @@ public:
   vector<Participant> filterByGivenName(string givenName);
   vector<Participant> filterByFamilyName(string familyName);
   vector<Participant> filterByScore(float score);
-
+  void undoLastOperation();
 };
 
 #endif /* defined(__Contest_CPP__Controller__) */

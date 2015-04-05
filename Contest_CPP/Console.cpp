@@ -43,6 +43,7 @@ void options() {
   cout<<"5. Filter Participants by given name" << endl;
   cout<<"6. Filter Participants by family name" << endl;
   cout<<"7. Filter Participants by score" << endl;
+  cout<<"8. Undo last operation" << endl;
   cout<<"0. Exit" << endl;
 }
 
@@ -121,6 +122,10 @@ void Console::filter_participants_by_score() {
   }
 }
 
+void Console::undo_last_operation() {
+  ctrl->undoLastOperation();
+}
+
 void Console::run() {
   while (true) {
     options();
@@ -151,6 +156,10 @@ void Console::run() {
         break;
       case 7:
         filter_participants_by_score();
+        break;
+      case 8:
+        undo_last_operation();
+        print_all_participants();
         break;
       default:
         break;

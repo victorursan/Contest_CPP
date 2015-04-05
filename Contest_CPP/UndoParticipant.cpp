@@ -15,7 +15,7 @@ UndoParticipant::UndoParticipant(const int position, const int operation, const 
 }
 
 UndoParticipant::~UndoParticipant() {
-  delete this;
+//  delete this;
 }
 
 int UndoParticipant::getPosition() const {
