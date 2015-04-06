@@ -32,7 +32,6 @@ int get_number(string msg) {
   return res;
 }
 
-
 void options() {
   cout<<"Menu\n____\n";
   cout<<"1. All Participants" << endl;
