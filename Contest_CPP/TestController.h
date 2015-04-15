@@ -10,5 +10,9 @@
 #define __Contest_CPP__TestController__
 
 #include <stdio.h>
+#include "Controller.h"
+#include <assert.h>
+
+void test_controller();
 
 #endif /* defined(__Contest_CPP__TestController__) */

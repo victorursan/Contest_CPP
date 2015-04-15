@@ -47,7 +47,7 @@ void Participant::setScore(float score) {
 }
 
 bool Participant::operator ==(const Participant& other) const {
-  return givenName == other.givenName && familyName == other.familyName;
+  return givenName == other.givenName && familyName == other.familyName && score == other.score;
 }
 
 bool Participant::operator !=(const Participant& other) const {

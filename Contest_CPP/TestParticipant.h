@@ -10,5 +10,9 @@
 #define __Contest_CPP__TestParticipant__
 
 #include <stdio.h>
+#include "Participant.h"
+#include <assert.h>
+
+void test_participant();
 
 #endif /* defined(__Contest_CPP__TestParticipant__) */

@@ -7,3 +7,13 @@
 //
 
 #include "TestUndoParticipant.h"
+
+void test_undoParticipant() {
+  Participant *p = new Participant("Mike", "Black", 10);
+  UndoParticipant *undo = new UndoParticipant(1, 1, *p);
+  assert(undo->getPosition() == 1);
+  assert(undo->getOperation() == 1);
+  assert(undo->getParticipant() == *p);
+  delete undo;
+  delete p;
+}

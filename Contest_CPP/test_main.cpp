@@ -7,3 +7,11 @@
 //
 
 #include "test_main.h"
+
+
+void test_main() {
+  test_participant();
+  test_undoParticipant();
+  test_controller();
+  test_repository();
+}

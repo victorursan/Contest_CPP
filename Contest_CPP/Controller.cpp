@@ -25,8 +25,6 @@ void Controller::addParticipant(string givenName, string familyName, float score
   Participant p(givenName, familyName, score);
   UndoParticipant undo = UndoParticipant(repository.size(), 1, p);
   undo_participants.push_back(undo);
-  cout<<"Added participant: \n";
-  cout<<p<<endl;
   repository.save(p);
 }
 

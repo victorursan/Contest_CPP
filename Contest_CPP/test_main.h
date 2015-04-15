@@ -10,5 +10,11 @@
 #define __Contest_CPP__test_main__
 
 #include <stdio.h>
+#include "TestController.h"
+#include "TestParticipant.h"
+#include "TestRepository.h"
+#include "TestUndoParticipant.h"
+
+void test_main();
 
 #endif /* defined(__Contest_CPP__test_main__) */

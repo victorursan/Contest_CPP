@@ -9,8 +9,10 @@
 #include <iostream>
 #include "Console.h"
 #include <vector>
+#include "test_main.h"
 
 int main(int argc, const char * argv[]) {
+  test_main();
   Repository<Participant> *repo = new Repository<Participant>();
   Controller *ctrl = new Controller(*repo);
   Console *console = new Console(ctrl);

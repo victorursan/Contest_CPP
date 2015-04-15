@@ -10,5 +10,9 @@
 #define __Contest_CPP__TestRepository__
 
 #include <stdio.h>
+#include "Repository.h"
+#include <assert.h>
+
+void test_repository();
 
 #endif /* defined(__Contest_CPP__TestRepository__) */

@@ -63,6 +63,8 @@ void Console::add_participant() {
   cin >> score;
   cin.clear();
   ctrl->addParticipant(givenName, familyName, score);
+  cout<<"Added participant: \n";
+  cout<<givenName<<" "<<familyName<<": "<<score<<endl;
 }
 
 void Console::remove_participant() {
