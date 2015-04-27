@@ -61,8 +61,8 @@ void test_undoLastOperation(Controller *ctrl) {
 }
 
 void test_controller() {
-  Repository<Participant> *repo = new Repository<Participant>();
-  Controller *ctrl = new Controller(*repo);
+  Repository<Participant> *repo = new Repository<Participant>(NULL);
+  Controller *ctrl = new Controller(repo);
   test_addParticipant(ctrl);
   test_updateParticipant(ctrl);
   test_removeParticiapnt(ctrl);

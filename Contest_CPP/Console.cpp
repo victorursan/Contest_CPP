@@ -7,6 +7,7 @@
 //
 
 #include "Console.h"
+#include <exception>
 
 Console::Console(Controller* ctrl) {
   this->ctrl = ctrl;
@@ -62,9 +63,14 @@ void Console::add_participant() {
   cout << "Score: ";
   cin >> score;
   cin.clear();
-  ctrl->addParticipant(givenName, familyName, score);
-  cout<<"Added participant: \n";
-  cout<<givenName<<" "<<familyName<<": "<<score<<endl;
+  try {
+    ctrl->addParticipant(givenName, familyName, score);
+    cout<<"Added participant: \n";
+    cout<<givenName<<" "<<familyName<<": "<<score<<endl;
+  } catch (MyException ex) {
+    cout<<ex.what()<<endl;
+  }
+
 }
 
 void Console::remove_participant() {
@@ -85,10 +91,15 @@ void Console::update_participant() {
   cout << "Score: ";
   cin >> score;
   cin.clear();
+  try {
   ctrl->updateParticipant(position, givenName, familyName, score);
+  } catch (MyException ex) {
+    cout<<ex.what()<<endl;
+  }
 }
 
 void Console::filter_participants_by_given_name() {
+  
   string givenName;
   cout << "Given name: ";
   cin >> givenName;

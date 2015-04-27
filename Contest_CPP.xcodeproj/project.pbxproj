@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		572649951AEE0FFD00C5D5BA /* ParticipantFileRepository.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 572649931AEE0FFD00C5D5BA /* ParticipantFileRepository.cpp */; };
+		5726499A1AEE1CFC00C5D5BA /* Validator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 572649981AEE1CFC00C5D5BA /* Validator.cpp */; };
 		574E93C81AD16FBF00BDEE64 /* UndoParticipant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574E93C61AD16FBF00BDEE64 /* UndoParticipant.cpp */; };
 		574E93CE1AD2726900BDEE64 /* TestParticipant.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574E93CC1AD2726900BDEE64 /* TestParticipant.cpp */; };
 		574E93D11AD2727900BDEE64 /* TestController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 574E93CF1AD2727900BDEE64 /* TestController.cpp */; };
@@ -33,6 +35,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		572649931AEE0FFD00C5D5BA /* ParticipantFileRepository.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticipantFileRepository.cpp; sourceTree = "<group>"; };
+		572649941AEE0FFD00C5D5BA /* ParticipantFileRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipantFileRepository.h; sourceTree = "<group>"; };
+		572649971AEE170000C5D5BA /* MyException.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyException.h; sourceTree = "<group>"; };
+		572649981AEE1CFC00C5D5BA /* Validator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Validator.cpp; sourceTree = "<group>"; };
+		572649991AEE1CFC00C5D5BA /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
+		5726499B1AEE1DC700C5D5BA /* EntityValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityValidator.h; sourceTree = "<group>"; };
+		5726499D1AEE331700C5D5BA /* Participant.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Participant.txt; sourceTree = "<group>"; };
+		5726499E1AEE3DBD00C5D5BA /* AbstractRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AbstractRepository.h; sourceTree = "<group>"; };
 		574E93C61AD16FBF00BDEE64 /* UndoParticipant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UndoParticipant.cpp; sourceTree = "<group>"; };
 		574E93C71AD16FBF00BDEE64 /* UndoParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UndoParticipant.h; sourceTree = "<group>"; };
 		574E93CC1AD2726900BDEE64 /* TestParticipant.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TestParticipant.cpp; path = Contest_CPP/TestParticipant.cpp; sourceTree = "<group>"; };
@@ -69,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		572649961AEE16D800C5D5BA /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				5726499B1AEE1DC700C5D5BA /* EntityValidator.h */,
+				572649971AEE170000C5D5BA /* MyException.h */,
+			);
+			name = Validators;
+			sourceTree = "<group>";
+		};
 		574E93AB1AD1648200BDEE64 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,11 +158,13 @@
 		FC3F35301ACD357B00ECB356 /* Contest_CPP */ = {
 			isa = PBXGroup;
 			children = (
+				572649961AEE16D800C5D5BA /* Validators */,
 				FC3F35461ACD4AE900ECB356 /* Repository */,
 				FC3F35451ACD4ADF00ECB356 /* Controller */,
 				FC3F353D1ACD458B00ECB356 /* Domain */,
 				FC3F353E1ACD463700ECB356 /* UI */,
 				FC3F35311ACD357B00ECB356 /* main.cpp */,
+				5726499D1AEE331700C5D5BA /* Participant.txt */,
 			);
 			path = Contest_CPP;
 			sourceTree = "<group>";
@@ -155,6 +176,8 @@
 				FC3F353B1ACD457C00ECB356 /* Participant.h */,
 				574E93C61AD16FBF00BDEE64 /* UndoParticipant.cpp */,
 				574E93C71AD16FBF00BDEE64 /* UndoParticipant.h */,
+				572649981AEE1CFC00C5D5BA /* Validator.cpp */,
+				572649991AEE1CFC00C5D5BA /* Validator.h */,
 			);
 			name = Domain;
 			sourceTree = "<group>";
@@ -180,8 +203,11 @@
 		FC3F35461ACD4AE900ECB356 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				5726499E1AEE3DBD00C5D5BA /* AbstractRepository.h */,
 				FC3F35471ACD4B0700ECB356 /* Repository.cpp */,
 				FC3F35481ACD4B0700ECB356 /* Repository.h */,
+				572649931AEE0FFD00C5D5BA /* ParticipantFileRepository.cpp */,
+				572649941AEE0FFD00C5D5BA /* ParticipantFileRepository.h */,
 			);
 			name = Repository;
 			sourceTree = "<group>";
@@ -212,7 +238,7 @@
 		FC3F35261ACD357A00ECB356 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Victor Ursan";
 				TargetAttributes = {
 					FC3F352D1ACD357A00ECB356 = {
@@ -247,8 +273,10 @@
 				FC3F35441ACD4AD800ECB356 /* Controller.cpp in Sources */,
 				FC3F353C1ACD457C00ECB356 /* Participant.cpp in Sources */,
 				FC3F35411ACD4A9E00ECB356 /* Console.cpp in Sources */,
+				572649951AEE0FFD00C5D5BA /* ParticipantFileRepository.cpp in Sources */,
 				574E93D71AD272AC00BDEE64 /* TestUndoParticipant.cpp in Sources */,
 				574E93CE1AD2726900BDEE64 /* TestParticipant.cpp in Sources */,
+				5726499A1AEE1CFC00C5D5BA /* Validator.cpp in Sources */,
 				574E93D41AD2729100BDEE64 /* TestRepository.cpp in Sources */,
 				FC3F35491ACD4B0700ECB356 /* Repository.cpp in Sources */,
 				574E93DA1AD2767E00BDEE64 /* test_main.cpp in Sources */,
@@ -263,7 +291,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -304,7 +331,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_MODULES = YES;

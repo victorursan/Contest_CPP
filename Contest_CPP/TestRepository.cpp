@@ -64,7 +64,7 @@ void test_size(Repository<int> *repo) {
 }
 
 void test_repository() {
-  Repository<int> *repo = new Repository<int>();
+  Repository<int> *repo = new Repository<int>(NULL);
   test_getAll(repo);
   test_save(repo);
   test_insertAtPosition(repo);

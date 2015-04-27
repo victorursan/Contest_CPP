@@ -13,24 +13,26 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <unistd.h>
 #include "Participant.h"
 #include "Repository.h"
 #include "Repository.cpp"
 #include "UndoParticipant.h"
+#include "AbstractRepository.h"
 
 using namespace std;
 
 class Controller {
-  Repository<Participant> repository;
+  AbstractRepository<Participant> *repository;
   vector<UndoParticipant> undo_participants;
 public:
-  Controller(Repository<Participant> repo);
+  Controller(AbstractRepository<Participant>* repo);
   ~Controller();
 
   vector<Participant> getParticipants();
-  void addParticipant(string givenName, string familyName, float score);
-  void updateParticipant(int id, string givenName, string familyName, float score);
-  void removeParticipant(int id);
+  void addParticipant(string givenName, string familyName, float score) throw (MyException);
+  void updateParticipant(int id, string givenName, string familyName, float score) throw (MyException);
+  void removeParticipant(int id) throw (MyException);
 //  Participant findParticipantWithId(int id);
   vector<Participant> filterByGivenName(string givenName);
   vector<Participant> filterByFamilyName(string familyName);

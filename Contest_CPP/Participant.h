@@ -26,13 +26,13 @@ public:
   Participant(const string &givenName = "", const string &familyName = "",const float &score = 0);
   ~Participant();
 
-  string getGivenName() const;
+  const string getGivenName() const;
   void setGivenName(string &givenName);
 
-  string getFamilyName() const;
+  const string getFamilyName() const;
   void setFamilyName(string &familyName);
 
-  float getScore() const;
+  const float getScore() const;
   void setScore(float score);
 
   bool operator ==(const Participant& other) const;

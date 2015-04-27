@@ -8,7 +8,7 @@
 
 #include "Controller.h"
 
-Controller::Controller(Repository<Participant> repo) {
+Controller::Controller(AbstractRepository<Participant>* repo) {
   /* Initializes Controller
    */
   this->repository = repo;
@@ -26,23 +26,23 @@ vector<Participant> Controller::getParticipants(){
 
    returns: all the participants
    */
-  return repository.getAll();
+  return repository->getAll();
 }
 
-void Controller::addParticipant(string givenName, string familyName, float score) {
+void Controller::addParticipant(string givenName, string familyName, float score) throw (MyException) {
   /* Add a participant
 
    param: givenName - a string with a given name
    param: familyName - a string with a family name
    param: score - a float with the score
-   */
+   */ 
   Participant p(givenName, familyName, score);
-  UndoParticipant undo = UndoParticipant(repository.size(), 1, p);
+  UndoParticipant undo = UndoParticipant(repository->size(), 1, p);
   undo_participants.push_back(undo);
-  repository.save(p);
+  repository->save(p);
 }
 
-void Controller::updateParticipant(int id, string givenName, string familyName, float score) {
+void Controller::updateParticipant(int id, string givenName, string familyName, float score) throw(MyException) {
   /* Update a participant
 
    param: id - the position of the participant
@@ -53,18 +53,18 @@ void Controller::updateParticipant(int id, string givenName, string familyName, 
   Participant p(givenName, familyName, score);
   UndoParticipant undo = UndoParticipant(id, 3, p);
   undo_participants.push_back(undo);
-  repository.update(id, p);
+  repository->update(id, p);
 }
 
-void Controller::removeParticipant(int id) {
+void Controller::removeParticipant(int id) throw(MyException) {
   /* Remove a participant
 
    param: id - the position from where to remove
    */
-  Participant p = repository.findById(id);
+  Participant p = repository->findById(id);
   UndoParticipant undo = UndoParticipant(id, 2, p);
   undo_participants.push_back(undo);
-  repository.remove(id);
+  repository->remove(id);
 }
 
 vector<Participant> Controller::filterByGivenName(string givenName) {
@@ -74,7 +74,7 @@ vector<Participant> Controller::filterByGivenName(string givenName) {
    
    returns: a filtered vector
    */
-  vector<Participant> toFilter = repository.getAll();
+  vector<Participant> toFilter = repository->getAll();
   vector<Participant> filtered;
   for (vector<Participant>::iterator p = toFilter.begin(); p != toFilter.end(); ++p) {
     if (p->getGivenName() == givenName) {
@@ -92,7 +92,7 @@ vector<Participant> Controller::filterByFamilyName(string familyName) {
    returns: a filtered vector
    */
 
-  vector<Participant> toFilter = repository.getAll();
+  vector<Participant> toFilter = repository->getAll();
   vector<Participant> filtered;
   for (vector<Participant>::iterator p = toFilter.begin(); p != toFilter.end(); ++p) {
     if (p->getFamilyName() == familyName) {
@@ -110,7 +110,7 @@ vector<Participant> Controller::filterByScore(float score) {
    returns: a filtered vector
    */
 
-  vector<Participant> toFilter = repository.getAll();
+  vector<Participant> toFilter = repository->getAll();
   vector<Participant> filtered;
   for (vector<Participant>::iterator p = toFilter.begin(); p != toFilter.end(); ++p) {
     if (p->getScore() == score) {
@@ -127,13 +127,13 @@ void Controller::undoLastOperation() {
   int op = undo.getOperation();
   switch (op) {
     case 1:
-      repository.remove(undo.getPosition());
+      repository->remove(undo.getPosition());
       break;
     case 2:
-      repository.insertAtPosition(undo.getPosition(), undo.getParticipant());
+      repository->insertAtPosition(undo.getPosition(), undo.getParticipant());
       break;
     case 3:
-      repository.update(undo.getPosition(), undo.getParticipant());
+      repository->update(undo.getPosition(), undo.getParticipant());
       break;
     default:
       break;

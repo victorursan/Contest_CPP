@@ -30,7 +30,7 @@ Participant::~Participant() {
 //  delete this;
 }
 
-string Participant::getGivenName() const {
+const string Participant::getGivenName() const {
   /* Get the given name of the Participant
    
    returns: the given name
@@ -46,7 +46,7 @@ void Participant::setGivenName(string &givenName) {
   this->givenName = givenName;
 }
 
-string Participant::getFamilyName() const {
+const string Participant::getFamilyName() const {
   /* Get the family name of the Participant
 
    returns: the family name
@@ -62,7 +62,7 @@ void Participant::setFamilyName(string &familyName) {
   this->familyName = familyName;
 }
 
-float Participant::getScore() const {
+const float Participant::getScore() const {
   /* Get the score of the Participant
 
    returns: the score
@@ -97,7 +97,7 @@ bool Participant::operator !=(const Participant& other) const {
 ostream& operator <<(ostream& os, const Participant& p) {
   /* Prints a Participant
    */
-  os << p.getGivenName() << " " << p.getFamilyName() << ": " << p.getScore() << "\n";
+  os << p.getGivenName() << " " << p.getFamilyName() << " " << p.getScore() << "\n";
   return os;
 }
 

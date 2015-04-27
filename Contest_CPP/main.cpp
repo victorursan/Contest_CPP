@@ -10,12 +10,16 @@
 #include "Console.h"
 #include <vector>
 #include "test_main.h"
+#include "Validator.h"
+#include "ParticipantFileRepository.h"
 
 int main(int argc, const char * argv[]) {
-  test_main();
-  Repository<Participant> *repo = new Repository<Participant>();
-  Controller *ctrl = new Controller(*repo);
+  //  test_main();
+  EntityValidator<Participant>* validator = new ParticipantValidator;
+  ParticipantFileRepository *repo = new ParticipantFileRepository(validator, "Participant.txt");
+  Controller *ctrl = new Controller(repo);
   Console *console = new Console(ctrl);
   console->run();
+
   return 0;
 }

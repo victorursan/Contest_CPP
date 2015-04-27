@@ -14,23 +14,30 @@
 #include <string>
 #include <vector>
 #include "Participant.h"
+#include "EntityValidator.h"
+#include "MyException.h"
+#include "AbstractRepository.h"
+#include "Validator.h"
 
 using namespace std;
 
 template <typename T>
-class Repository {
+class Repository : public AbstractRepository<T> {
   vector<T> store;
-
+  EntityValidator<T> *validator;
 public:
   Repository();
   ~Repository();
 
+  Repository(EntityValidator<T> *validator);
+
   vector<T> getAll();
-  void save(T p);
-  void insertAtPosition(int id, T p);
-  void update(int id, T p);
-  void remove(int id);
-  const T findById(int id);
+
+  virtual void save(T p) throw (MyException);
+  virtual void insertAtPosition(int id, T p) throw (MyException);
+  void update(int id, T p) throw (MyException);
+  void remove(int id) throw (MyException);
+  const T findById(int id) throw (MyException);
   int size();
 };
 

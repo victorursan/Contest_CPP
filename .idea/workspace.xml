@@ -234,6 +234,52 @@
     <entry file="file://$PROJECT_DIR$/Contest_CPP/Controller.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Contest_CPP/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Contest_CPP/Console.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1429117881000" expanded="true" signature="196:220" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="242:281" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="310:545" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="562:981" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="1022:1208" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="1242:1580" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="1617:1712" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="1749:2067" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="2119:2420" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="2473:2778" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="2825:3118" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="3156:3188" placeholder="{...}" />
+            <marker date="1429117881000" expanded="true" signature="3210:3992" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Contest_CPP/Console.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Contest_CPP/Controller.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
           <folding />
         </state>
